@@ -1,0 +1,65 @@
+.account{
+    user-select: none;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
+
+.accountInfo{
+    padding-top: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;    
+    text-align: center;
+    color: gray;
+    font-size: 30px;
+    background-color: rgba(128, 128, 128, 0.5);
+    padding-bottom: 20px;
+}
+
+.lable{
+    box-shadow: 0 0 10px 0 white;
+    position: relative;
+    font-size: 20px;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 5px;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.accountInfo span{
+    color: gray;
+}
+
+span.oprationinfo{
+    /* text-shadow: 1px 1px 4px black; */
+    color: aqua;
+}
+
+input[type="submit"]{
+    width: auto;
+    font-size: 20px;
+    color: aqua;
+    background-color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: 700;
+    outline-style: none ;
+    border: 1px solid #ccc; 
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+input[type="submit"]:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
