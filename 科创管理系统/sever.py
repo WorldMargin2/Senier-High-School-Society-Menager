@@ -120,7 +120,11 @@ class AppSever:
         
         @app.route("/members",methods=[GET])
         def ReturnMembers():
-            return(render_template("viewMembers.html",members=getMembers()))
+            initInfo=getMembers()
+            renderedInfo=renderInfo(initInfo)
+            # print(initInfo)
+            # print(renderedInfo)
+            return(render_template("viewMembers.html",members=renderedInfo,keywords=getKeyWords(),sheetheader=getSheetHeader()))
         
         @app.route("/logout",methods=[POST])
         def logout():

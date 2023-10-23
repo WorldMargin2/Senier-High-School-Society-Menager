@@ -1,7 +1,32 @@
-{%for member in members%}
-<div>
-    {%for i in ("userid","name","class","grade","position","department","contactstyle")%}
-    <span>member[i]</span>
-    {%endfor%}
-</div>
-{%endfor%}
+<html>
+    <head>
+        <link rel="stylesheet" href="CSS/viewMembers.css">
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr class="sheetHeader">
+                {%for i in sheetheader%}
+                    <th>{{i}}</th>
+                {%endfor%}
+                </tr>
+            </thead>                
+            <tbody>                
+                <div>
+                {%for member in members%}    
+                    <tr>
+                        {%for i in keywords%}
+                        <td>{{member[i]}}</td>
+                        {%endfor%}         
+                    </tr>
+                {%endfor%}
+                </div>
+            
+            </tbody>
+        </table>
+    </body>
+</html>
+
+
+
+

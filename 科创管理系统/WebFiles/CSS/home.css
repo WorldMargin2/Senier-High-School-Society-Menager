@@ -16,6 +16,7 @@ body{
     top: 40px;
     width: 100%;
     height: calc(100% - 40px);
+    overflow: hidden;
     display: block;
     opacity: 0;
     animation-name: showForm;
