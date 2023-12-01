@@ -1,0 +1,58 @@
+
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="../">
+        <script src="../JS/jquery.js" ></script>
+        <script src="../JS//message.js"></script>
+        <link rel="stylesheet" href="../CSS/editMember.css">
+        <title>编辑:{{userid}}</title>
+    </head>
+    <body>
+        <form action="" method="post">
+            <div class="label-input">
+                {{form.userid.label}}
+                {{form.userid}}
+            </div>
+                
+            <div class="label-input">
+                {{form.name.label}}
+                {{form.name}}
+            </div>
+            <div class="label-input">
+                {{form.grade.label}}
+                {{form.grade}}
+            </div>
+            <div class="label-input">
+                {{form.userclass.label}}
+                {{form.userclass}}
+            </div>
+            <div class="label-input">
+                {{form.position.label}}
+                {{form.position}}
+            </div>
+            <div class="label-input">
+                {{form.department.label}}
+                {{form.department}}
+            </div>
+            <div class="label-input">
+                {{form.contactStyle.label}}
+                {{form.contactStyle}}
+            </div>
+            
+            {{form.csrf_token}}
+            {{form.submit}}
+        </form>
+    </body>
+
+    
+    <script src="../JS/editMember.js"></script>
+
+    {%for message in get_flashed_messages()%}
+    <script>
+        sendMessage({message:"{{message}}",liveTime:2});
+    </script>
+    {%endfor%}
+    
+</html>

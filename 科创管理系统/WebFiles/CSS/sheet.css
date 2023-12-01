@@ -1,0 +1,126 @@
+
+
+tbody::-webkit-scrollbar {
+    position: absolute;
+	width: 0.2vw;
+	background-color: rgba(128, 128, 128,0.3);
+}
+
+tbody::-webkit-scrollbar-thumb {
+    width: 0.2vw;
+	border-radius: 0.5vw;
+	background-color: rgba(0, 255, 255,0.8);
+}
+
+table{
+    z-index: 0;
+    border-radius: 0.5em;
+    overflow: hidden;
+    box-shadow: 0 0 5px 1px gray;
+    table-layout: fixed;
+    user-select: none;
+    position: relative;
+    overflow-y: hidden;
+    left: 2%;
+    top: 5%;
+    width: 96%;
+    color: gray;
+    height: 85%;
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+}
+
+table tbody {
+    table-layout: fixed;
+    position: relative;
+    width: 100%;
+    height: calc(100% - 2em);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: block;
+}
+
+tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    overflow-x: hidden;
+    transition: all 0.8s;
+}
+
+tbody tr:hover{
+    background-color: rgba(31, 143, 255,0.5)
+}
+
+table thead{    
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    color: gray;
+    /* box-shadow: 0 0 0.2em 0 black; */
+}
+
+table thead tr{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+tr button{
+    color: aqua;
+    background-color: transparent;
+    outline:  none;
+    border: 1px solid aqua;
+    transition: all 0.5s;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+/* tr button:hover{
+    transform: scale(1.1);
+} */
+tr button{
+    cursor: pointer;
+}
+
+.del{
+    cursor: pointer;
+    color: rgb(255, 105, 105);
+    border: 1px solid rgb(255, 105, 105);
+}
+/* .del:hover{
+    transform:scale(1.1);
+} */
+
+td[tp="contactStyle"]{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+div.search{
+    position: relative;
+    top: 6%;
+    height: 10%;
+    z-index: 1;
+}
+
+input,select,button{
+    outline-style: none ;
+    border: 1px solid #ccc; 
+    border-radius: 3px;
+    padding: 6px;
+    transition: all 0.5s;
+    caret-color: aqua;
+    color: gray;
+    background-color: transparent;
+}
+
+input:focus,select:focus,button:hover{
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+
+

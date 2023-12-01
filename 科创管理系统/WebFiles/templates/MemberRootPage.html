@@ -1,0 +1,31 @@
+<html lang="zh-cn">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <base href="../">
+        <title>成员管理</title>
+        <script src="../JS/jquery.js"></script>
+        <script src="../JS/membersRoot.js"></script>
+        <!-- 消息框架 -->
+        <script src="../JS/message.js"></script>
+        <link rel="stylesheet" href="../CSS/MemberRoot.css">
+        <!-- 消息框架样式表 -->
+        <link rel="stylesheet" href="../CSS/message.css">
+    </head>
+    <body>
+        <div class="PageChangers">
+            <div class="PageChanger url-select" url="/Members/view">查看</div>
+            {%if validateOpration%}
+            <div class="PageChanger" url="/Members/edit">管理</div>
+            <div class="PageChanger" url="/Members/add">添加</div>
+            {%endif%}
+        </div>
+        
+        <iframe id="PageFrame" src="/Members/view"></iframe>
+    </body>
+    <script>
+        init();
+        let msgArea=new messageArea("body");
+        listenMessage(window,msgArea);
+    </script>
+</html>

@@ -1,0 +1,22 @@
+<html lang="zh-cn">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>首页</title>
+        <link rel="stylesheet" href="../CSS/home.css" type="text/css">
+        <script src="../JS/jquery.js"></script>
+
+    </head>
+    <body>
+        <div id="topbar">
+            {%for name,href in [["成员管理","/Members"],["社费管理","/socialFees"],["会议管理","/meetingManage"],["协会管理","/SocietyManage"],["账号管理","/account"]]%}
+                <div class="topTab {%if name=='成员管理'%}selectedTab{%endif%}" href="{{ href }}" title="{{name}}">{{name}}</div>
+            {%endfor%}
+        </div>
+        <iframe id="mainFrame" src="/Members" title="成员管理">
+        </iframe>
+        
+        
+    </body>
+    <script src="../JS/home.js"></script>
+</html>

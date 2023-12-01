@@ -1,0 +1,54 @@
+
+
+{%block sheet%}
+<table class="tablesorter">
+    <thead>
+        <tr class="sheetHeader">
+        {%for i in sheetheader%}
+            <th>{{i}}</th>
+        {%endfor%}
+        {%for i in controlKey%}
+        <th>{{i}}</th>
+        {%endfor%}
+        </tr>
+    </thead>                
+    <tbody>
+        {%-for member in members-%}    
+            <tr id="{{member['userid']}}">
+                {%for i in keywords%}
+                <td tp="{{i}}" title="{{member[i]}}">
+                    {%-if i=="userclass"-%}
+                    {{"%02d"%member[i]}}
+                    {%-else-%}
+                    {{member[i]}}
+                    {%-endif-%}
+                </td>
+                {%-endfor-%}
+                {%-if controlers-%}
+                <td tp="controler">
+                    {%-for i in controlers-%}
+                    <button class='{{ i["controlerType"] }}'>
+                        {{ i["text"] }}
+                    </button>
+                    {%-endfor-%} 
+                </td>
+                {%-endif-%}    
+            </tr>
+        {%-endfor-%}    
+    </tbody>
+</table>
+<div class="search">
+    <select name="" class="searchSelect">
+        {%for i,j in KS%}
+        <option value="{{i}}">{{j}}</option>
+        {%endfor%}
+    </select>
+    <input type="text" class="searchInput">
+    <button class="copybtn">复制</button>
+</div>
+<script src="../JS/tablesort.js"></script>
+<script src="../JS/MemberSort.js"></script>
+<script src="../JS/searchMember.js"></script>
+<script src="../JS/clipboard.js"></script>
+
+{%endblock%}
